@@ -1,0 +1,43 @@
+﻿@model List<PoetSite.Models.AudioPoem>
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="mb-4">🎧 Audio Poems</h2>
+
+<a class="btn btn-primary mb-3" href="/Admin/Audio/Create">➕ Add Audio</a>
+
+<table class="table table-bordered table-hover align-middle">
+    <thead class="table-light">
+    <tr>
+        <th>Title</th>
+        <th>Player</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Title</td>
+            <td>
+                <audio controls style="width: 250px">
+                    <source src="@item.AudioPath" type="audio/mpeg" />
+                </audio>
+            </td>
+            <td>
+                <a class="btn btn-sm btn-warning"
+                   href="/Admin/Audio/Edit/@item.Id">
+                    ✏ Edit
+                </a>
+
+                <a class="btn btn-sm btn-danger"
+                   href="/Admin/Audio/Delete/@item.Id">
+                    🗑 Delete
+                </a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

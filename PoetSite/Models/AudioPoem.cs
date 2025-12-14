@@ -1,8 +1,11 @@
-﻿namespace PoetSite.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace PoetSite.Models;
 
 public class AudioPoem
 {
     public int Id { get; set; }
-    public string Title { get; set; } = null!;
+    [Required]
+    public string Title { get; set; } = String.Empty;
     public string AudioPath { get; set; } = null!;
 }

@@ -1,0 +1,24 @@
+﻿@model PoetSite.Models.AudioPoem
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Delete Audio</h2>
+
+<p>Are you sure you want to delete:</p>
+
+<strong>@Model.Title</strong>
+
+<br /><br />
+
+<audio controls>
+    <source src="@Model.AudioPath" type="audio/mpeg" />
+</audio>
+
+<form asp-action="Delete" method="post" class="mt-3">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id" />
+    <button class="btn btn-danger">🗑 Yes, Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

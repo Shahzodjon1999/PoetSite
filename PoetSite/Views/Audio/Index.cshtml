@@ -1,14 +1,22 @@
-﻿@model List<AudioPoem>
+﻿@model List<PoetSite.Models.AudioPoem>
 
-<h3>Аудио</h3>
-<hr />
+<section class="container my-5">
+    <h1 class="text-center mb-4">🎧 Audio Poems</h1>
 
-@foreach (var audio in Model)
-{
-    <div class="mb-3">
-        <p>@audio.Title</p>
-        <audio controls class="w-100">
-            <source src="@audio.AudioPath" type="audio/mpeg">
-        </audio>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Title</h5>
+
+                        <audio controls class="w-100 mt-2">
+                            <source src="@item.AudioPath" type="audio/mpeg" />
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        }
     </div>
-}
+</section>
