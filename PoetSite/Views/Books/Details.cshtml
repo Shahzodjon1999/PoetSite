@@ -18,7 +18,7 @@
             {
                 <div class="bg-light d-flex align-items-center justify-content-center"
                      style="height:350px">
-                    <span class="text-muted">No cover</span>
+                    <span class="text-muted">Тасвир нест</span>
                 </div>
             }
         </div>
@@ -38,21 +38,20 @@
                     <a href="@Model.PdfFile"
                        target="_blank"
                        class="btn btn-primary btn-lg me-2">
-                        📖 Read PDF
+                        📖 PDF-ро хонед
                     </a>
                     <a asp-action="Read"
                        asp-route-id="@Model.Id"
                        class="btn btn-primary btn-lg me-2">
-                        📖 Read Online
+                        📖 Онлайн хонед
                     </a>
                 }
 
                 <a asp-action="Index"
                    class="btn btn-outline-secondary btn-lg">
-                    ← Back to books
+                    ← Бозгашт ба китобҳо
                 </a>
             </div>
         </div>
-
     </div>
 </section>

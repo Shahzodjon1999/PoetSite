@@ -5,7 +5,7 @@
 }
 
 <section class="container my-5">
-    <h1 class="text-center mb-5">📚 Books</h1>
+    <h1 class="text-center mb-5">📚 Китобҳо</h1>
 
     <div class="row g-4">
         @foreach (var book in Model)
@@ -23,7 +23,7 @@
                     {
                         <div class="bg-light d-flex align-items-center justify-content-center"
                              style="height:320px">
-                            <span class="text-muted">No cover</span>
+                            <span class="text-muted">Тасвир нест</span>
                         </div>
                     }
 
@@ -44,17 +44,16 @@
                                 <a href="@book.PdfFile"
                                    target="_blank"
                                    class="btn btn-outline-primary w-100">
-                                    📖 Read / Download
+                                    📖 Хондан / Боргирӣ кардан
                                 </a>
                             }
                         </div>
                         <a asp-action="Details"
                            asp-route-id="@book.Id"
                            class="btn btn-outline-primary w-100">
-                            📖 View Details
+                            📖 Тафсилотро бинед
                         </a>
                     </div>
-
                 </div>
             </div>
         }

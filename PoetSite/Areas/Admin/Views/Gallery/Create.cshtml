@@ -1,21 +1,18 @@
 ﻿@{
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
-<h2>Upload Image</h2>
-
+<h2>Бор кардани тасвир</h2>
 
 <form method="post" enctype="multipart/form-data">
     <div class="mb-3">
-        <label>Image</label>
+        <label>Тасвир</label>
         <input type="file" name="image" class="form-control" accept="image/*" />
     </div>
 
-
     <div class="mb-3">
-        <label>Title</label>
+        <label>Сарлавха</label>
         <input name="title" class="form-control" />
     </div>
 
-
-    <button class="btn btn-success">Upload</button>
+    <button class="btn btn-success">Сабт кардан</button>
 </form>

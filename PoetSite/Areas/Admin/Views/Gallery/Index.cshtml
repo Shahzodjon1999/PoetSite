@@ -2,9 +2,9 @@
 @{
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
-<h2>Gallery11</h2>
+<h2>Суратхо</h2>
 
-<a class="btn btn-primary mb-3" href="/Admin/Gallery/Create">+ Upload Image</a>
+<a class="btn btn-primary mb-3" href="/Admin/Gallery/Create">+ Бор кардани тасвир</a>
 
 <div class="row">
     @foreach (var img in Model)
@@ -14,7 +14,7 @@
                 <img src="@img.ImagePath" class="card-img-top" style="height:200px; object-fit:cover" />
                 <div class="card-body text-center">
                     <small>@img.Caption</small><br />
-                    <a asp-action="Delete" asp-route-id="@img.Id" class="text-danger">Delete</a>
+                    <a asp-action="Delete" asp-route-id="@img.Id" class="text-danger">Нест кардан</a>
                 </div>
             </div>
         </div>

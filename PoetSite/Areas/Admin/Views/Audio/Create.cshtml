@@ -3,30 +3,23 @@
 @{
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
-<h2 class="mb-4">Add Audio Poem</h2>
+<h2 class="mb-4">Илова кардани шеъри аудиоӣ</h2>
 
-<form asp-area="Admin"
-      asp-controller="Audio"
-      asp-action="Create"
-      method="post"
-      enctype="multipart/form-data">
-
+<form asp-area="Admin" asp-controller="Audio" asp-action="Create" method="post" enctype="multipart/form-data">
     @Html.AntiForgeryToken()
-
-
     <div class="mb-3">
-        <label>Title</label>
+        <label>Сарлавха</label>
         <input name="title" class="form-control" />
     </div>
     
     <div class="mb-3">
-        <label class="form-label">MP3 File</label>
+        <label class="form-label">MP3 Файл</label>
         <input type="file" name="audioFile" class="form-control" accept="audio/mpeg" required />
     </div>
     <button type="submit" class="btn btn-success">
-        💾 Save
+        💾 Сабт кардан
     </button>
 
-    <a asp-action="Index" class="btn btn-secondary ms-2">Cancel</a>
+    <a class="btn btn-secondary ms-2" href="/Admin/Audio/Index">Бекор кардан</a>
 </form>
 

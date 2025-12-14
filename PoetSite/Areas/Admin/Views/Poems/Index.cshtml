@@ -3,22 +3,21 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Manage Poems</h2>
-<a class="btn btn-primary mb-3" asp-action="Create">+ Add Poem</a>
-
+<h2>Идоракунии шеърҳо</h2>
+<a class="btn btn-primary mb-3" asp-action="Create">+ Шеър илова кунед</a>
 
 <table class="table table-bordered">
     <tr>
-        <th>Title</th>
-        <th>Actions</th>
+        <th>Сарлавха</th>
+        <th>Амалҳо</th>
     </tr>
     @foreach (var poem in Model)
     {
         <tr>
             <td>@poem.Title</td>
             <td>
-                <a asp-action="Edit" asp-route-id="@poem.Id">Edit</a> |
-                <a asp-action="Delete" asp-route-id="@poem.Id" class="text-danger">Delete</a>
+                <a asp-action="Edit" asp-route-id="@poem.Id">Таҳрир</a> |
+                <a asp-action="Delete" asp-route-id="@poem.Id" class="text-danger">Нест кардан</a>
             </td>
         </tr>
     }

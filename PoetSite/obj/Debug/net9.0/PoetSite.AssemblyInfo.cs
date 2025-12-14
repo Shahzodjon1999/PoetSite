@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PoetSite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04c62bebfa7f8127f2db7dbcb4a64fca8826ee92")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7113cbdb71c155c452bc00805e1d38fe0c695df")]
 [assembly: System.Reflection.AssemblyProductAttribute("PoetSite")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PoetSite")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

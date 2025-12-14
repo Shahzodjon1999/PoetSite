@@ -2,19 +2,10 @@
 @{
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
-
-<h2 class="mb-4">📘 Add New Book</h2>
-
-<form asp-area="Admin"
-      asp-controller="Books"
-      asp-action="Create"
-      method="post"
-      enctype="multipart/form-data">
-
+<h2 class="mb-4">📘 Илова кардани китоби нав</h2>
+<form asp-area="Admin" asp-controller="Books" asp-action="Create" method="post" enctype="multipart/form-data">
     @Html.AntiForgeryToken()
-
     <div asp-validation-summary="All" class="text-danger"></div>
-    
     <div class="mb-3">
         <label asp-for="Title" class="form-label"></label>
         <input name="title" class="form-control" required />
@@ -27,15 +18,15 @@
     </div>
 
     <div class="mb-3">
-        <label class="form-label">🖼 Cover Image</label>
+        <label class="form-label">🖼 Тасвири муқова</label>
         <input type="file" name="coverFile" class="form-control" accept="image/*" />
     </div>
 
     <div class="mb-3">
-        <label class="form-label">📄 PDF File</label>
+        <label class="form-label">📄 Файли PDF</label>
         <input type="file" name="pdfFile" class="form-control" accept="application/pdf" required />
     </div>
 
-    <button class="btn btn-success">💾 Save</button>
-    <a asp-area="Admin" asp-controller="Books" asp-action="Index" class="btn btn-secondary">Cancel</a>
+    <button class="btn btn-success">💾 Сабт кардан</button>
+    <a class="btn btn-secondary" href="/Admin/Books/Index">Бекор кардан</a>
 </form>

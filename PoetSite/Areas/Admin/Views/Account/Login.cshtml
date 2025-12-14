@@ -1,16 +1,16 @@
 ﻿@{
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
-<h2>Admin Login</h2>
+<h2>Вуруди администратор</h2>
 
 <form method="post">
     <div class="mb-3">
-        <label>Username</label>
+        <label>Логин</label>
         <input name="username" class="form-control" />
     </div>
 
     <div class="mb-3">
-        <label>Password</label>
+        <label>Парол</label>
         <input name="password" type="password" class="form-control" />
     </div>
 
@@ -19,5 +19,5 @@
         <div class="text-danger">@ViewBag.Error</div>
     }
 
-    <button class="btn btn-primary">Login</button>
+    <button class="btn btn-primary">Даромадан</button>
 </form>

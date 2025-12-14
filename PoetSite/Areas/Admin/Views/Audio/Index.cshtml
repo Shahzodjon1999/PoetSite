@@ -4,16 +4,16 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2 class="mb-4">🎧 Audio Poems</h2>
+<h2 class="mb-4">🎧 Шеърҳои аудиоӣ</h2>
 
-<a class="btn btn-primary mb-3" href="/Admin/Audio/Create">➕ Add Audio</a>
+<a class="btn btn-primary mb-3" href="/Admin/Audio/Create">➕ Иловаи аудио</a>
 
 <table class="table table-bordered table-hover align-middle">
     <thead class="table-light">
     <tr>
-        <th>Title</th>
-        <th>Player</th>
-        <th>Actions</th>
+        <th>Сарлавха</th>
+        <th>Аудио</th>
+        <th>Амалҳо</th>
     </tr>
     </thead>
     <tbody>
@@ -29,12 +29,12 @@
             <td>
                 <a class="btn btn-sm btn-warning"
                    href="/Admin/Audio/Edit/@item.Id">
-                    ✏ Edit
+                    ✏ Таҳрир
                 </a>
 
                 <a class="btn btn-sm btn-danger"
                    href="/Admin/Audio/Delete/@item.Id">
-                    🗑 Delete
+                    🗑 Нест кардан
                 </a>
             </td>
         </tr>

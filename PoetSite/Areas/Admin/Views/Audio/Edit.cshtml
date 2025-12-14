@@ -2,18 +2,17 @@
 @{
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
-
-<h2>Edit Audio Poem</h2>
+<h2>Таҳрири шеъри аудиоӣ</h2>
 
 <form method="post" enctype="multipart/form-data">
     <input type="hidden" asp-for="Id" />
     
     <div class="mb-3">
-        <label>Title</label>
+        <label>Сарлавха</label>
         <input name="title" class="form-control" />
     </div>
     <div class="mb-3">
-        <label>Replace MP3 (optional)</label>
+        <label>Ивазкуни MP3 (optional)</label>
         <input type="file" name="audioFile" class="form-control" />
     </div>
 
@@ -21,5 +20,5 @@
         <source src="@Model.AudioPath" type="audio/mpeg" />
     </audio>
 
-    <button class="btn btn-primary">Update</button>
+    <button class="btn btn-primary">Иваз кардан</button>
 </form>

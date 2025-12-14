@@ -3,13 +3,11 @@
 @{
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
+<h2>Нест кардани аудио</h2>
 
-<h2>Delete Audio</h2>
-
-<p>Are you sure you want to delete:</p>
+<p>Оё шумо мутмаин ҳастед, ки мехоҳед нест кунед:</p>
 
 <strong>@Model.Title</strong>
-
 <br /><br />
 
 <audio controls>
@@ -19,6 +17,6 @@
 <form asp-action="Delete" method="post" class="mt-3">
     @Html.AntiForgeryToken()
     <input type="hidden" asp-for="Id" />
-    <button class="btn btn-danger">🗑 Yes, Delete</button>
-    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    <button class="btn btn-danger">🗑 Бале, Нест кардан</button>
+    <a class="btn btn-secondary" href="/Admin/Audio/Index">Бекор кардан</a>
 </form>
