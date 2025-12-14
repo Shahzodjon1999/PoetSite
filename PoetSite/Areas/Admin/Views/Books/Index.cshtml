@@ -1,0 +1,45 @@
+﻿@model IEnumerable<PoetSite.Models.Book>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<h2 class="mb-4">📚 Books</h2>
+
+<a class="btn btn-primary mb-3" href="/Admin/Books/Create">+ Add Book</a>
+
+<table class="table table-bordered table-hover align-middle">
+    <thead class="table-light">
+    <tr>
+        <th>Cover</th>
+        <th>Title</th>
+        <th width="200">Actions</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td width="120">
+                @if (!string.IsNullOrEmpty(item.CoverImage))
+                {
+                    <img src="@item.CoverImage"
+                         class="img-thumbnail"
+                         style="max-height:100px" />
+                }
+            </td>
+            <td>@item.Title</td>
+            <td>
+                <a class="btn btn-sm btn-warning"
+                   href="/Admin/Books/Edit/@item.Id">
+                    ✏ Edit
+                </a>
+
+                <a class="btn btn-sm btn-danger"
+                   href="/Admin/Books/Delete/@item.Id">
+                    🗑 Delete
+                </a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

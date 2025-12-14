@@ -1,0 +1,41 @@
+﻿@model PoetSite.Models.Book
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="mb-4">📘 Add New Book</h2>
+
+<form asp-area="Admin"
+      asp-controller="Books"
+      asp-action="Create"
+      method="post"
+      enctype="multipart/form-data">
+
+    @Html.AntiForgeryToken()
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+    
+    <div class="mb-3">
+        <label asp-for="Title" class="form-label"></label>
+        <input name="title" class="form-control" required />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label"></label>
+        <textarea name="description" class="form-control" rows="4"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">🖼 Cover Image</label>
+        <input type="file" name="coverFile" class="form-control" accept="image/*" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">📄 PDF File</label>
+        <input type="file" name="pdfFile" class="form-control" accept="application/pdf" required />
+    </div>
+
+    <button class="btn btn-success">💾 Save</button>
+    <a asp-area="Admin" asp-controller="Books" asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

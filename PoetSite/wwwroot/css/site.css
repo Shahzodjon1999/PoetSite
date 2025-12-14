@@ -16,3 +16,21 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
 }
+
+
+.book-card {
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,.15);
+}
+
+img {
+    transition: transform .3s ease;
+}
+
+img:hover {
+    transform: scale(1.03);
+}

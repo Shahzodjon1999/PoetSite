@@ -1,0 +1,58 @@
+﻿@model PoetSite.Models.Book
+
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<section class="container my-5">
+    <div class="row align-items-start">
+
+        <!-- Cover -->
+        <div class="col-md-4 mb-4">
+            @if (!string.IsNullOrEmpty(Model.CoverImage))
+            {
+                <img src="@Model.CoverImage"
+                     class="img-fluid rounded shadow" />
+            }
+            else
+            {
+                <div class="bg-light d-flex align-items-center justify-content-center"
+                     style="height:350px">
+                    <span class="text-muted">No cover</span>
+                </div>
+            }
+        </div>
+
+        <!-- Info -->
+        <div class="col-md-8">
+            <h1 class="mb-3">@Model.Title</h1>
+
+            @if (!string.IsNullOrEmpty(Model.Description))
+            {
+                <p class="text-muted fs-5">@Model.Description</p>
+            }
+
+            <div class="mt-4">
+                @if (!string.IsNullOrEmpty(Model.PdfFile))
+                {
+                    <a href="@Model.PdfFile"
+                       target="_blank"
+                       class="btn btn-primary btn-lg me-2">
+                        📖 Read PDF
+                    </a>
+                    <a asp-action="Read"
+                       asp-route-id="@Model.Id"
+                       class="btn btn-primary btn-lg me-2">
+                        📖 Read Online
+                    </a>
+                }
+
+                <a asp-action="Index"
+                   class="btn btn-outline-secondary btn-lg">
+                    ← Back to books
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
