@@ -1,0 +1,18 @@
+body {
+    font-family: 'Merriweather', serif;
+}
+
+.hero {
+    min-height: 280px;
+    background: linear-gradient(135deg, #1f2933, #111827);
+}
+
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+}

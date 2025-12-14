@@ -1,0 +1,14 @@
+﻿@model List<AudioPoem>
+
+<h3>Аудио</h3>
+<hr />
+
+@foreach (var audio in Model)
+{
+    <div class="mb-3">
+        <p>@audio.Title</p>
+        <audio controls class="w-100">
+            <source src="@audio.AudioPath" type="audio/mpeg">
+        </audio>
+    </div>
+}

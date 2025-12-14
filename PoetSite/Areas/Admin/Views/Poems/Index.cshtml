@@ -1,0 +1,25 @@
+﻿@model List<PoetSite.Models.Poem>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Manage Poems</h2>
+<a class="btn btn-primary mb-3" asp-action="Create">+ Add Poem</a>
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Title</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var poem in Model)
+    {
+        <tr>
+            <td>@poem.Title</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@poem.Id">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@poem.Id" class="text-danger">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

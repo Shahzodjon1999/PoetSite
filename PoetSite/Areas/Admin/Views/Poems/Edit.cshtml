@@ -1,0 +1,26 @@
+﻿@model PoetSite.Models.Poem
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Edit Poem</h2>
+
+
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+
+
+    <div class="mb-3">
+        <label>Title</label>
+        <input asp-for="Title" class="form-control" />
+    </div>
+
+
+    <div class="mb-3">
+        <label>Text</label>
+        <textarea asp-for="Text" class="form-control" rows="10"></textarea>
+    </div>
+
+
+    <button class="btn btn-primary">Update</button>
+</form>

@@ -1,0 +1,13 @@
+﻿@model List<Poem>
+
+<h2 class="mb-4">Poems</h2>
+
+@foreach (var poem in Model)
+{
+    <div class="card mb-3 shadow-sm">
+        <div class="card-body">
+            <h5>@poem.Title</h5>
+            <pre class="mt-3">@poem.Text</pre>
+        </div>
+    </div>
+}

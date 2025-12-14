@@ -1,0 +1,29 @@
+﻿body {
+    background-color: #f4f6f9;
+}
+
+
+.sidebar {
+    width: 240px;
+    min-height: 100vh;
+    background: #212529;
+}
+
+
+.sidebar .nav-link {
+    color: #adb5bd;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+
+.sidebar .nav-link:hover {
+    background: #343a40;
+    color: #fff;
+}
+
+
+.content {
+    background: #fff;
+    border-radius: 8px;
+}

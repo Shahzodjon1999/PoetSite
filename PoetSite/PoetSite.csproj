@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\audio\" />
+      <Folder Include="wwwroot\images\" />
+      <Folder Include="wwwroot\uploads\gallery\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Views\Resources\Views\Home\Index.ru.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Index.ru.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Views\Resources\Views\Home\Index.tj.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Index.tj.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Views\Resources\Views\Home\Index.en.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Index.en.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Views\Resources\Views\Home\Index.ru.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Index.ru.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Views\Resources\Views\Home\Index.tj.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Index.tj.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Views\Resources\Views\Home\Index.en.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Index.en.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+</Project>

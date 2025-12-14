@@ -1,0 +1,46 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@namespace PoetSite.Areas.Admin.Views
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Admin Panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/admin.css" />
+</head>
+<body>
+<div class="d-flex">
+
+
+    <!-- Sidebar -->
+    <aside class="sidebar p-3">
+        <h4 class="text-white">Poet Admin</h4>
+        <ul class="nav flex-column mt-4">
+            <li class="nav-item"><a class="nav-link" href="/admin/poems">📜 Poems</a></li>
+            <li class="nav-item"><a class="nav-link" href="/admin/books">📚 Books</a></li>
+            <li class="nav-item"><a class="nav-link" href="/admin/gallery">🖼 Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="/admin/audio">🎧 Audio</a></li>
+            <li class="nav-item"><a class="nav-link" href="/admin/biography">👤 Biography</a></li>
+            <li class="nav-item mt-3">
+                <a class="nav-link text-danger" href="/admin/account/logout">Logout</a>
+            </li>
+        </ul>
+    </aside>
+
+
+    <!-- Main content -->
+    <main class="content flex-fill p-4">
+        @RenderBody()
+    </main>
+
+
+</div>
+
+
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
