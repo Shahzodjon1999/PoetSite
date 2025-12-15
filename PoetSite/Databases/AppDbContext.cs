@@ -17,7 +17,7 @@ public class AppDbContext:DbContext
     
     public AppDbContext(DbContextOptions<AppDbContext> options):base(options)
     {
-            
+        Database.EnsureCreated();
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -31,7 +31,7 @@ public class AppDbContext:DbContext
         {
           Id = 1,
           Title = "Шохномаи Фирдавси",
-          Text = "jkdhfsdfghdghd hdfjkdhfgkh jfdskjfhkjsdg",
+          Text = "тест",
           CreatedAt = DateTime.Now.Date,
           Language = "TJ",
         };
