@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PoetSite.Databases;
 using PoetSite.Models;
@@ -6,6 +7,7 @@ using PoetSite.Models;
 namespace PoetSite.Areas.Admin.Controllers;
 
 [Area("Admin")]
+[Authorize]
 public class BooksController : Controller
 {
     private readonly AppDbContext _context;
@@ -76,31 +78,7 @@ public class BooksController : Controller
         return RedirectToAction("Index");
     }
     
-    /*[HttpPost]
-    [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create(Book model, IFormFile? coverFile)
-    {
-        if (ModelState.IsValid)
-        {
-            if (coverFile != null)
-            {
-                string uploads = Path.Combine(_env.WebRootPath, "uploads");
-                Directory.CreateDirectory(uploads);
-                string filePath = Path.Combine(uploads, coverFile.FileName);
-                using (var stream = new FileStream(filePath, FileMode.Create))
-                {
-                    await coverFile.CopyToAsync(stream);
-                }
-                model.CoverImage = "/uploads/" + coverFile.FileName;
-            }
-
-            _context.Books.Add(model);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-        return View(model);
-    }*/
-
+   
     // GET: Admin/Books/Edit/5
     public async Task<IActionResult> Edit(int id)
     {

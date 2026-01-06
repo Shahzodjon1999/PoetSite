@@ -4,7 +4,7 @@ body {
 
 .hero {
     min-height: 280px;
-    background: linear-gradient(135deg, #1f2933, #111827);
+   /* background: linear-gradient(135deg, #1f2933, #111827);*/
 }
 
 
@@ -33,4 +33,12 @@ img {
 
 img:hover {
     transform: scale(1.03);
+}
+
+.bg-custom {
+    background-color: #198781 !important;
+}
+
+#mainNavbar .nav-link {
+    color: #f8f9fa !important;
 }

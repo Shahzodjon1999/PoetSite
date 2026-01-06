@@ -27,13 +27,13 @@ public class AccountController : Controller
         var user = _context.AdminUsers.FirstOrDefault(x => x.Username == username);
         if (user == null)
         {
-            ViewBag.Error = "Invalid login";
+            ViewBag.Error = "Неверный логин";
             return View();
         }
 
         if (!BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
         {
-            ViewBag.Error = "Invalid password";
+            ViewBag.Error = "Неверный пароль";
             return View();
         }
 
