@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@*
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -73,3 +74,53 @@
 @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+*@
+
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - Лоиқ Шералӣ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+<body>
+
+<header class="main-header">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="logo">
+            🖋 Лоиқ Шералӣ
+        </div>
+        <nav>
+            <a asp-controller="Home" asp-action="Index">Асосӣ</a>
+            <a asp-controller="Biography" asp-action="Index">Тарҷумаи ҳол</a>
+            <a asp-controller="Poems" asp-action="Index">Шеърҳо</a>
+            <a asp-controller="Books" asp-action="Index">Китобҳо</a>
+            <a asp-controller="Gallery" asp-action="Index">Аксҳо</a>
+            <a asp-controller="Audio" asp-action="Index">Аудио</a>
+        </nav>
+    </div>
+</header>
+
+@RenderSection("Hero", required: false)
+
+<main class="container content">
+    @RenderBody()
+</main>
+
+<footer class="main-footer">
+    <p>© 2025 Лоиқ Шералӣ</p>
+    <small>Ҳамаи ҳуқуқ маҳфуз аст</small>
+</footer>
+
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

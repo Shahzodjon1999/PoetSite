@@ -1,6 +1,43 @@
 ﻿@{
-    ViewData["Title"] = "Home";
+    ViewData["Title"] = "Асосӣ";
 }
 
-<h1>Ҳоҷӣ Ҳусайн Мӯсозода</h1>
-<p>Хуш омадед ба сомонаи расмӣ...</p>
+@section Hero {
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                
+                <div class="col-md-4 text-center">
+                    <img src="~/images/loiq.jpg" alt="Лоиқ Шералӣ" />
+                </div>
+
+                <div class="col-md-8">
+                    <h1>Хоҷӣ Ҳусайн Мӯсозода</h1>
+                    <p>Шеър овози рӯҳ аст</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+}
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="feature-card">
+            <h4>📜 Шеърҳо</h4>
+            <p>Осори адабӣ ва шеърҳои интихобшуда</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="feature-card">
+            <h4>📚 Китобҳо</h4>
+            <p>Маҷмӯаҳои чопшуда ва электронӣ</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="feature-card">
+            <h4>🎧 Аудио</h4>
+            <p>Қироати шеърҳо бо овоз</p>
+        </div>
+    </div>
+</div>

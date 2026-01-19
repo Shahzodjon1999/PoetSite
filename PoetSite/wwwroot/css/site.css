@@ -1,3 +1,4 @@
+/*
 body {
     font-family: 'Merriweather', serif;
 }
@@ -34,3 +35,131 @@ img {
 img:hover {
     transform: scale(1.03);
 }
+*/
+
+body {
+    font-family: 'Merriweather', serif;
+    background: #f7f5f0;
+    color: #2b2b2b;
+}
+
+/* Header */
+.main-header {
+    background: #1f2a2e;
+    padding: 20px 0;
+}
+
+.logo {
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+}
+
+.main-header nav a {
+    color: #f5f5f5;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.main-header nav a:hover {
+    color: #c9a24d;
+}
+
+/* Hero */
+.hero {
+    padding: 80px 0;
+    background: #f7f5f0;
+    border-bottom: 1px solid #e6e3dc;
+}
+
+.hero img {
+    max-width: 300px;
+    border-radius: 8px;
+    filter: grayscale(100%);
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #555;
+}
+
+/* Content */
+.content {
+    padding: 60px 0;
+}
+
+/* Cards */
+.feature-card {
+    background: #fff;
+    padding: 30px;
+    border: 1px solid #e6e3dc;
+    text-align: center;
+}
+
+/* Footer */
+.main-footer {
+    background: #1f2a2e;
+    color: #ccc;
+    text-align: center;
+    padding: 30px 0;
+}
+
+
+/*
+
+
+body {
+    font-family: 'Merriweather', serif;
+    background-color: #f7f5f0;
+    color: #2b2b2b;
+}
+
+!* Navbar *!
+.navbar {
+    background-color: #1f2a2e !important;
+}
+
+.navbar-brand,
+.nav-link {
+    color: #f5f5f5 !important;
+}
+
+.nav-link:hover {
+    color: #c9a24d !important;
+}
+
+!* Hero *!
+.hero {
+    min-height: 60vh;
+    background:
+            linear-gradient(rgba(31,42,46,0.65), rgba(31,42,46,0.65)),
+            url('/images/loiq-hero.jpg') center/cover no-repeat;
+}
+
+.hero h1 {
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+}
+
+.hero p {
+    color: #e5e5e5;
+}
+
+!* Titles *!
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #1f2a2e;
+}
+
+!* Footer *!
+footer {
+    background-color: #1f2a2e;
+}
+*/
+
