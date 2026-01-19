@@ -6,12 +6,12 @@
 .sidebar {
     width: 240px;
     min-height: 100vh;
-    background: #212529;
+    background: #193a87;
 }
 
 
 .sidebar .nav-link {
-    color: #adb5bd;
+    color: #fff;
     padding: 10px;
     border-radius: 6px;
 }
