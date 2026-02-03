@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
+using PoetSite.Areas.Admin.Models;
+using PoetSite.Areas.Admin.ViewModels;
 using PoetSite.Databases;
 
 namespace PoetSite.Areas.Admin.Controllers;
@@ -22,16 +24,16 @@ public class AccountController : Controller
     }
 
     [HttpPost]
-    public IActionResult Login(string username, string password)
+    public IActionResult Login(AdminUser request)
     {
-        var user = _context.AdminUsers.FirstOrDefault(x => x.Username == username);
+        var user = _context.AdminUsers.FirstOrDefault(x => x.Username == request.Username);
         if (user == null)
         {
             ViewBag.Error = "Неверный логин";
             return View();
         }
 
-        if (!BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
+        if (!BCrypt.Net.BCrypt.Verify(request.PasswordHash, user.PasswordHash))
         {
             ViewBag.Error = "Неверный пароль";
             return View();

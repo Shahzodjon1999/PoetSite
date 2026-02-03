@@ -1,7 +1,4 @@
-﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-@namespace PoetSite.Areas.Admin.Views
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -33,5 +30,7 @@
 </div>
 
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Подключение секции Scripts -->
+@RenderSection("Scripts", required: false)
 </body>
 </html>
