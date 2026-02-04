@@ -24,7 +24,7 @@ public class AccountController : Controller
     }
 
     [HttpPost]
-    public IActionResult Login(AdminUser request)
+    public IActionResult Login(LoginViewModel request)
     {
         var user = _context.AdminUsers.FirstOrDefault(x => x.Username == request.Username);
         if (user == null)

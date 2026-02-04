@@ -1,4 +1,5 @@
-﻿@{
+﻿@model PoetSite.Areas.Admin.ViewModels.LoginViewModel
+@{
     Layout = "_AdminAuthLayout";
 }
 <div class="row">
@@ -13,15 +14,15 @@
 
         <form asp-area="Admin" asp-controller="Account" asp-action="Login" method="post">
             <div class="form-group mb-3">
-                <label asp-for="UserName">Имя пользователя</label>
-                <input asp-for="UserName" class="form-control" />
-                <span asp-validation-for="UserName" class="text-danger"></span>
+                <label asp-for="Username">Имя пользователя</label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
             </div>
 
             <div class="form-group mb-3">
-                <label asp-for="Password">Пароль</label>
-                <input asp-for="Password" type="password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
+                <label asp-for="PasswordHash">Пароль</label>
+                <input asp-for="PasswordHash" type="password" class="form-control" />
+                <span asp-validation-for="PasswordHash" class="text-danger"></span>
             </div>
 
             <div class="form-check mb-3">

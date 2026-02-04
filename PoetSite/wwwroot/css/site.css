@@ -1,53 +1,27 @@
-/*
-body {
-    font-family: 'Merriweather', serif;
-}
-
-.hero {
-    min-height: 280px;
-   /* background: linear-gradient(135deg, #1f2933, #111827);*/
-}
-
-
-.hero h1 {
-    font-family: 'Playfair Display', serif;
-}
-
-.navbar-brand {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-}
-
-
-.book-card {
-    transition: transform .2s ease, box-shadow .2s ease;
-}
-
-.book-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 25px rgba(0,0,0,.15);
-}
-
-img {
-    transition: transform .3s ease;
-}
-
-img:hover {
-    transform: scale(1.03);
-}
-<<<<<<< HEAD
-*/
-
-body {
+/* ===============================
+   Общие стили
+   =============================== */
+html, body {
+    height: 100%;
+    margin: 0;
     font-family: 'Merriweather', serif;
     background: #f7f5f0;
     color: #2b2b2b;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Header */
+.content {
+    flex: 1;
+    padding: 60px 15px;
+}
+
+/* ===============================
+   Header
+   =============================== */
 .main-header {
-    background: #1f2a2e;
-    padding: 20px 0;
+    background: #24767b;
+    padding: 15px 0;
 }
 
 .logo {
@@ -56,116 +30,91 @@ body {
     font-size: 22px;
 }
 
+.main-header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
 .main-header nav a {
     color: #f5f5f5;
-    margin-left: 20px;
+    margin: 5px 15px;
     text-decoration: none;
     font-size: 16px;
+    transition: color 0.2s ease;
 }
 
 .main-header nav a:hover {
-    color: #c9a24d;
+    color: #198781;
 }
 
-/* Hero */
+/* ===============================
+   Hero
+   =============================== */
 .hero {
-    padding: 80px 0;
+    padding: 60px 15px;
     background: #f7f5f0;
     border-bottom: 1px solid #e6e3dc;
+    text-align: center;
 }
 
 .hero img {
-    max-width: 300px;
+    max-width: 100%;
+    width: 250px;
     border-radius: 8px;
     filter: grayscale(100%);
+    margin-bottom: 20px;
+    transition: transform .3s ease;
+}
+
+.hero img:hover {
+    transform: scale(1.05);
 }
 
 .hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 48px;
+    font-size: 36px;
+    margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 20px;
+    font-size: 18px;
     color: #555;
 }
 
-/* Content */
-.content {
-    padding: 60px 0;
-}
-
-/* Cards */
+/* ===============================
+   Feature Cards
+   =============================== */
 .feature-card {
     background: #fff;
-    padding: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
     border: 1px solid #e6e3dc;
     text-align: center;
+    border-radius: 8px;
+    transition: transform .2s ease, box-shadow .2s ease;
 }
 
-/* Footer */
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,.15);
+}
+
+/* ===============================
+   Footer
+   =============================== */
 .main-footer {
-    background: #1f2a2e;
+    background: #24767b;
     color: #ccc;
     text-align: center;
-    padding: 30px 0;
+    padding: 30px 15px;
+    font-size: 14px;
 }
 
-
-/*
-
-
-body {
-    font-family: 'Merriweather', serif;
-    background-color: #f7f5f0;
-    color: #2b2b2b;
-}
-
-!* Navbar *!
-.navbar {
-    background-color: #1f2a2e !important;
-}
-
-.navbar-brand,
-.nav-link {
-    color: #f5f5f5 !important;
-}
-
-.nav-link:hover {
-    color: #c9a24d !important;
-}
-
-!* Hero *!
-.hero {
-    min-height: 60vh;
-    background:
-            linear-gradient(rgba(31,42,46,0.65), rgba(31,42,46,0.65)),
-            url('/images/loiq-hero.jpg') center/cover no-repeat;
-}
-
-.hero h1 {
-    color: #ffffff;
-    font-family: 'Playfair Display', serif;
-}
-
-.hero p {
-    color: #e5e5e5;
-}
-
-!* Titles *!
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    color: #1f2a2e;
-}
-
-!* Footer *!
-footer {
-    background-color: #1f2a2e;
-}
-*/
-
-=======
-
+/* ===============================
+   Custom colors
+   =============================== */
 .bg-custom {
     background-color: #198781 !important;
 }
@@ -173,4 +122,42 @@ footer {
 #mainNavbar .nav-link {
     color: #f8f9fa !important;
 }
->>>>>>> cb15bb29580ae6ee6c6ff94257e26ec9e14ff20c
+
+/* ===============================
+   Адаптивные медиа-запросы
+   =============================== */
+@media (max-width: 767px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .main-header nav {
+        flex-direction: column;
+    }
+
+    .main-header nav a {
+        margin: 8px 0;
+    }
+
+    .feature-card {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+}

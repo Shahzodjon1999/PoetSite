@@ -5,9 +5,11 @@ namespace PoetSite.Areas.Admin.ViewModels;
 public class LoginViewModel
 {
     [Required]
-    public string UserName { get; set; }
+    public string Username { get; set; } = string.Empty;
             
     [Required]
     [DataType(DataType.Password)]
-    public string Password { get; set; }
+    public string PasswordHash { get; set; } =  string.Empty;
+    
+    public bool RememberMe { get; set; }
 }

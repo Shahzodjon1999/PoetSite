@@ -2,4 +2,12 @@
 
 <h3>Тарҷумаи ҳол</h3>
 <hr />
-<p style="white-space: pre-line">@Model?.Content</p>
+
+@if (Model != null)
+{
+    <p style="white-space: pre-line">@Model?.Content</p>
+}
+else
+{
+    <p>NТарҷумаи ҳол дастрас нест.</p>
+}

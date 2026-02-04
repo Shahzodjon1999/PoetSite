@@ -95,17 +95,27 @@
 
 <header class="main-header">
     <div class="container d-flex justify-content-between align-items-center">
-        <div class="logo">
-            🖋 Лоиқ Шералӣ
-        </div>
-        <nav>
-            <a asp-controller="Home" asp-action="Index">Асосӣ</a>
-            <a asp-controller="Biography" asp-action="Index">Тарҷумаи ҳол</a>
-            <a asp-controller="Poems" asp-action="Index">Шеърҳо</a>
-            <a asp-controller="Books" asp-action="Index">Китобҳо</a>
-            <a asp-controller="Gallery" asp-action="Index">Аксҳо</a>
-            <a asp-controller="Audio" asp-action="Index">Аудио</a>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+            <div class="container">
+                <a class="navbar-brand fw-bold" asp-controller="Home" asp-action="Index">🖋 Лоиқ Шералӣ</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">Асосӣ</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Biography" asp-action="Index">Тарҷумаи ҳол</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Poems" asp-action="Index">Шеърҳо</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Books" asp-action="Index">Китобҳо</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Gallery" asp-action="Index">Аксҳо</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Audio" asp-action="Index">Аудио</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
+
+
     </div>
 </header>
 

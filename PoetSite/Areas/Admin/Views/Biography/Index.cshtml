@@ -1,0 +1,25 @@
+@model List<Biography>
+
+
+<h2>Biography List</h2>
+<a asp-area="Admin" asp-controller="Biography" asp-action="Create">Create New</a>
+
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Content</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Content</td>
+            <td>
+                <a asp-area="Admin" asp-controller="Biography" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-area="Admin" asp-controller="Biography" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
